@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <link href="style.css"rel="stylesheet" type="text/css">
-    <link href="reset.css"rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="reset.css" rel="stylesheet" type="text/css">
     <title>Encriptador/Desencriptador</title>
 
-    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -24,20 +23,29 @@
                     </div>
                 </section>
                 <section class="text-container">
-                    <textarea class="input-text" cols="40" rows="6" placeholder="Ingreso texto aquí"></textarea>
+                    <div class="bloque"></div>
+                    <textarea class="input-text" cols="40" rows="6" placeholder="Ingrese texto aquí"></textarea>
+                    <div class="aclaracion">
+                        <img src="img/advertencia.png">
+                        <span>
+                        Solo letras minusculas y sin acentos
+                    </span>
+                    </div>
                     <div class="botones">
-                        <button class="encriptar">Encriptar</button>
-                        <button class="desencriptar">Desencriptar</button>
+                        <button class="encriptar" onclick="btnEncriptar()">Encriptar</button>
+                        <button class="desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
                     </div>
                 </section>
                 <section class="message-container">
-                    <textarea class="message" cols="18" rows="8"></textarea>
-                    <button class="copiar">Copiar</button>
+                    <textarea class="message" cols="18" rows="8" readonly></textarea>
+                    <div class="btnCopy">
+                        <button class="copiar" onclick="copiar()">Copiar</button>
+                    </div>
                 </section>
             </div>
 
     </main>
-
+    <script src="script.js"></script>
     <footer>
 
     </footer>
