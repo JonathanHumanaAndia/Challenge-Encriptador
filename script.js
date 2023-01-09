@@ -2,6 +2,8 @@
 const inputText= document.querySelector(".input-text");
 const message= document.querySelector(".message");
 const copy = document.querySelector(".copiar");
+const textoNoEncontrado = document.querySelector(".textoNoEncontrado");
+
 
 //  `La letra "e" es convertida para "enter"`
 // `La letra "i" es convertida para "imes"`
@@ -13,8 +15,12 @@ function btnEncriptar(){
         const textoEncriptado = encriptar(inputText.value);
         message.value =textoEncriptado;
         message.style.backgroundImage = "none";
-        inputText.value = "";
+        message.style.height="85%";
         copy.style.visibility = "visible";
+        textoNoEncontrado.style.visibility="hidden";
+        textoNoEncontrado.style.height="0";
+        inputText.value = "";
+
 }
 function encriptar(cadenaTexto){
     let matrizString = [["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]];
@@ -30,6 +36,9 @@ function btnDesencriptar(){
     const textoEncriptado = desencriptar(inputText.value);
     message.value =textoEncriptado;
     message.style.backgroundImage = "none";
+    message.style.height="85%";
+    textoNoEncontrado.style.visibility="hidden";
+    textoNoEncontrado.style.height="0";
     inputText.value = "";
     copy.style.visibility = "visible";
 

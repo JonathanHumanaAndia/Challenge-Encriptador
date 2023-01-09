@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
     <link href="style.css" rel="stylesheet" type="text/css">
     <link href="reset.css" rel="stylesheet" type="text/css">
     <title>Encriptador/Desencriptador</title>
@@ -38,6 +42,9 @@
                 </section>
                 <section class="message-container">
                     <textarea class="message" cols="18" rows="8" readonly></textarea>
+                    <div class="textoNoEncontrado">
+                        <strong id="negrita">Ningun mensaje fue encontrado</strong><br><br>Ingrese el texto que desees encriptar o deseencriptar
+                    </div>
                     <div class="btnCopy">
                         <button class="copiar" onclick="copiar()">Copiar</button>
                     </div>
@@ -46,8 +53,5 @@
 
     </main>
     <script src="script.js"></script>
-    <footer>
-
-    </footer>
 </body>
 </html>
